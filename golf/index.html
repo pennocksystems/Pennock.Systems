@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+  <link rel="stylesheet" href="golf.css" />
+  <title>Pennock Systems Chatbot Demo</title>
+</head>
+<body>
+  <header>
+    <h1>Whispering Pines Golf Club</h1>
+    <nav>
+      <a href="#course-info">Course Info</a>
+      <a href="#clubhouse">Clubhouse</a>
+      <a href="#resort">Resort</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    This page has been created solely for demonstration purposes.<br>
+    All fully functional features are limited to the chatbot component.
+  </section>
+
+  <main>
+    <section id="course-info">
+        <h2>Pennock Systems Demo Chatbot</h1>
+        <p class="demo-notice">
+          This is a demo website with no real functionality.<br>
+          To begin, select the 'Whispering Pines' logo in the bottom right-hand corner.<br>
+          Intended for demonstration and learning purposes only.<br>
+          Ready to work together? Contact us - pennocksystems@gmail.com
+        </p>
+    </section>
+  </main>
+
+  <!-- Chatbot Frame (Initially hidden) -->
+  <div id="chatbot-frame" style="display: none;">
+    <div class="chat-header">
+      <strong>Whispering Pines Golf Club</strong>
+      <!-- Reset Button in Header -->
+      <button id="reset-chat" onclick="resetChat()" class="reset-btn">⟲</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div id="chatbot-messages">
+        <!-- Messages will appear here -->
+      </div>
+    </div>
+    <div id="chatbot-buttons-container">
+      <div id="chatbot-buttons">
+        <button class="chatbot-btn" onclick="handleButtonClick('Course Info⛳')">Course Info⛳</button>
+        <button class="chatbot-btn" onclick="handleButtonClick('Clubhouse🏌️')">Clubhouse🏌️</button>
+        <button class="chatbot-btn" onclick="handleButtonClick('Resort🏨')">Resort🏨</button>
+        <button class="chatbot-btn" onclick="handleButtonClick('Contact📞')">Contact📞</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toggle Button (Logo) -->
+  <div id="chatbot-toggle" onclick="toggleChatbot()" title="Chat with us!">
+    <img src="images/Faded Golf Ball.png" alt="Chatbot Logo" class="chatbot-logo" />
+  </div>
+
+  <script src="golf.js"></script>
+  <script>
+    // Toggle the chatbot visibility
+    function toggleChatbot() {
+      var frame = document.getElementById('chatbot-frame');
+      
+      if (frame.classList.contains('show')) {
+        frame.classList.remove('show');
+        setTimeout(() => {
+          frame.style.display = "none"; // After fade-out, hide it
+        }, 500); // Delay to match the fade-out duration
+      } else {
+        frame.style.display = "flex"; // Make the chatbot visible
+        setTimeout(() => {
+          frame.classList.add('show'); // After visibility is set, fade it in
+        }, 10); // Small delay to trigger the fade-in
+      }
+    }
+
+    // Reset the chat by clearing messages
+    function resetChat() {
+      const chatMessages = document.getElementById('chatbot-messages');
+      chatMessages.innerHTML = ''; // Clear chat history
+
+      // Optionally, you can re-trigger the chatbot greeting or menu here
+      const greetingMessage = document.createElement('div');
+      greetingMessage.classList.add('bot-message');
+      greetingMessage.innerHTML = 'We’ll give you a mulligan! <strong>You reset the chat</strong> ⛳️ Now how can I help you get back on course? 🏌️‍♂️';
+      chatMessages.appendChild(greetingMessage);
+    }
+  </script>
+</body>
+</html>

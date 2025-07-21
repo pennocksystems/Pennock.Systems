@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+  <title>Pennock Systems | RSG</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #a2c9f7, #ffffff); /* Light blue to white gradient */
+    }
+
+    #background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    .center-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .iphone-frame {
+      width: 300px;
+      height: 560px;
+      background: #111;
+      border: 10px solid #222;
+      border-radius: 40px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 15px;
+      overflow: hidden;
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .notch {
+      width: 120px;
+      height: 24px;
+      background: #000;
+      border-radius: 0 0 15px 15px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      background: linear-gradient(to bottom, #49c6f4, #1976d2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .app-icon:hover {
+      transform: scale(1.05);
+    }
+
+    #weatherApp {
+      display: none;
+      text-align: center;
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: linear-gradient(to bottom, #49c6f4, #1976d2);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #weatherResult {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #weatherIcon {
+      width: 70px;
+      height: 70px;
+    }
+
+    .weather-layout {
+  display: flex;
+  align-items: center;     /* ✅ Vertical center */
+  justify-content: center; /* ✅ Horizontal center (optional) */
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.weather-instructions {
+  max-width: 300px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.weather-instructions h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.weather-instructions ul {
+  padding-left: 0;  /* Removed the default padding */
+  margin: 0;
+  list-style-type: none;  /* Removed default bullets */
+}
+
+.weather-instructions li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;  /* Space for the droplet emoji */
+}
+
+  </style>
+</head>
+<body>
+  
+<!-- Flex container for the layout -->
+<div class="weather-layout">
+
+    <!-- Instructions (left side) -->
+    <div class="weather-instructions">
+      <h3>🌤️ Global Weather Integration</h3>
+      <ul>
+        <li>Select the weather app icon</li>
+        <li>Enter a city and state name like: <strong>Chicago, Illinois</strong></li>
+        <li>Or use a state abbreviation (e.g., <strong>Chicago, IL</strong>)</li>
+        <li>Search anywhere in the world</li>
+        <li>When finished, close this tab</li>
+      </ul>      
+    </div>
+  
+<!-- iPhone (right side) -->
+<div class="iphone-frame">
+  <div class="notch"></div>
+  <div class="app-icon" onclick="openWeatherApp()">☁</div>
+
+  <!-- Weather App Inside iPhone Frame -->
+  <div id="weatherApp">
+    <h1>🌦️ Global Weather</h1>
+    <input type="text" id="cityInput" placeholder="Enter a city...">
+    <button onclick="getWeather()">Check</button>
+    <div id="weatherResult"></div>
+  </div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <script>
+    const stateAbbreviations = {
+      "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
+      "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware",
+      "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
+      "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas",
+      "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
+      "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
+      "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada",
+      "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
+      "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma",
+      "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina",
+      "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
+      "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
+      "WI": "Wisconsin", "WY": "Wyoming"
+    };
+
+    let currentEffect;
+
+    function setVanta(effectName) {
+      if (currentEffect) currentEffect.destroy();
+      const effects = {
+        clouds: VANTA.CLOUDS,
+        fog: VANTA.FOG,
+        rings: VANTA.RINGS,
+        net: VANTA.NET
+      };
+      currentEffect = effects[effectName]({
+        el: ".iphone-frame",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.0,
+        scaleMobile: 1.0
+      });
+    }
+
+    function openWeatherApp() {
+      document.querySelector('.app-icon').style.display = 'none';
+      document.getElementById('weatherApp').style.display = 'block';
+    }
+
+    async function getWeather() {
+  let city = document.getElementById('cityInput').value.trim();
+
+  // Normalize state abbreviation to full name if present
+  const parts = city.split(',');
+  if (parts.length === 2) {
+    const cityName = parts[0].trim();
+    let stateCode = parts[1].trim().toUpperCase();
+    if (stateAbbreviations[stateCode]) {
+      city = `${cityName}, ${stateAbbreviations[stateCode]}`;
+    }
+  }
+
+  const apiKey = "edb1145d41fca6184a60f131bfce361f";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=imperial`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data.cod === "404") {
+      document.getElementById('weatherResult').innerHTML = "🌧️ City not found.";
+      setVanta('net');
+      return;
+    }
+
+    const name = data.name;
+    const temp = data.main.temp;
+    const feelsLike = data.main.feels_like;
+    const humidity = data.main.humidity;
+    const windSpeed = data.wind.speed;
+    const description = data.weather[0].description;
+    const icon = data.weather[0].icon;
+    const mainWeather = data.weather[0].main.toLowerCase();
+
+    document.getElementById('weatherResult').innerHTML = `
+      <h2>${name}</h2>
+      <img id="weatherIcon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
+      <p><strong>${temp}°F</strong> — ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
+      <p>🌡️ Feels like: ${feelsLike}°F</p>
+      <p>💨 Wind: ${windSpeed} mph</p>
+      <p>💧 Humidity: ${humidity}%</p>
+    `;
+
+    if (mainWeather.includes('cloud')) setVanta('clouds');
+    else if (mainWeather.includes('rain') || mainWeather.includes('drizzle')) setVanta('fog');
+    else if (mainWeather.includes('thunderstorm')) setVanta('rings');
+    else if (mainWeather.includes('snow')) setVanta('net');
+    else setVanta('rings');
+
+  } catch (error) {
+    document.getElementById('weatherResult').innerHTML = "⚠️ Error fetching weather.";
+    setVanta('net');
+    console.error(error);
+  }
+}
+    setVanta('clouds'); // Initial background
+
+    function goToNextLesson() {
+  // Replace the URL below with your actual next lesson page
+  window.location.href = "module4-5.html";
+}
+
+  function goToLastLesson() {
+    window.location.href = "module4-3.html";
+  }
+
+
+  </script>
+</body>
+</html>

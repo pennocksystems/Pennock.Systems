@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pennock Systems Chatbot Demo</title>
+  <link rel="stylesheet" href="learn.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+</head>
+<body>
+
+    <div class="homepage">
+
+  <!-- Hero Section -->
+  <div class="homepage">
+    <header class="hero">
+      <h1>Pennock Systems Demo Chatbot</h1>
+      <p class="demo-notice">
+        This is a demo website with no real functionality.<br>
+        To begin, select the Pennock Systems logo in the bottom right-hand corner.<br>
+        Intended for demonstration and learning purposes only.<br>
+        Ready to work together? Contact us - pennocksystems@gmail.com
+      </p>
+    </header>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <h2>💬 24/7 Support</h2>
+      <p>Instant answers to common questions at any time.</p>
+    </div>
+    <div class="feature-box">
+      <h2>🌐 Multi-language</h2>
+      <p>Chatbot supports several languages to help reach more users.</p>
+    </div>
+    <div class="feature-box">
+      <h2>⚙️ Customizable</h2>
+      <p>Tailor the chatbot experience to your brand and audience.</p>
+    </div>
+  </section>
+
+  <!-- Chatbot Embed -->
+  <div id="chatbot-frame" style="display: none;">
+    <div class="chat-header">
+      <strong>Pennock Systems | RSG</strong>
+      <button id="reset-chat" onclick="resetChat()" class="reset-btn">↻</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div id="chatbot-messages">
+        <!-- Messages will appear here -->
+      </div>
+    </div>
+    <div id="chatbot-buttons-container">
+      <div id="chatbot-buttons">
+        <button class="chatbot-btn" onclick="handleButtonClick('Option 1️⃣')">Option 1️⃣</button>
+        <button class="chatbot-btn" onclick="handleButtonClick('Learn 📝')">Learn 📝</button>
+        <button class="chatbot-btn" onclick="handleButtonClick('Features ⚡')">Features ⚡</button>
+        <button class="chatbot-btn" onclick="handleButtonClick('Contact ✉️')">Contact ✉️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toggle Button -->
+  <div id="chatbot-toggle" onclick="toggleChatbot()">
+    <img src="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" alt="Chatbot Logo" class="chatbot-logo" />
+  </div>
+
+  <script src="learn.js"></script>
+  <script>
+    function toggleChatbot() {
+      var frame = document.getElementById('chatbot-frame');
+      if (frame.classList.contains('show')) {
+        frame.classList.remove('show');
+        setTimeout(() => { frame.style.display = "none"; }, 500);
+      } else {
+        frame.style.display = "flex";
+        setTimeout(() => { frame.classList.add('show'); }, 10);
+      }
+    }
+
+    function resetChat() {
+      const chatMessages = document.getElementById('chatbot-messages');
+      chatMessages.innerHTML = '';
+      const greetingMessage = document.createElement('div');
+      greetingMessage.classList.add('bot-message');
+      greetingMessage.innerHTML = '<strong>You reset the chat!🔄</strong> How can I assist you?';
+      chatMessages.appendChild(greetingMessage);
+    }
+  </script>
+</body>
+</html>

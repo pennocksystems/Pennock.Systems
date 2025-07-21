@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+  <title>Pennock Systems | RSG</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #0f0f0f;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #00ff88;
+      position: relative;
+    }
+
+    /* Matrix background */
+    #matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: #0f0f0f;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    .container {
+      background: rgba(0, 255, 136, 0.05);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      backdrop-filter: blur(14px);
+      padding: 2.5rem;
+      border-radius: 16px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,255,136,0.2);
+      animation: floatIn 1.5s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes floatIn {
+      0% { transform: scale(0.98); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+      color: #00ff88;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #c1ffc9;
+      margin-bottom: 2rem;
+      min-height: 24px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    li {
+      background: rgba(0, 255, 136, 0.05);
+      border: 1px solid rgba(0,255,136,0.15);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    li:hover {
+      transform: scale(1.03);
+    }
+
+    li span {
+      font-size: 1.5rem;
+      margin-right: 12px;
+    }
+
+    .start-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #0f0f0f;
+      background: #00ff88;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 12px #00ff88aa;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .start-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #00ff88ee;
+    }
+
+    .robot {
+      width: 32px;
+      height: 32px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="matrix"></canvas>
+
+  <div class="container">
+    <div class="emoji"></div>
+    <h1>
+      User-Experience
+      <img class="robot" src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Robot">
+    </h1>
+    <p class="subtitle" id="typewriter"></p>
+    <ul>
+      <li><span>🎯</span>Boosts Conversations + Turns Visitors Into Customers</li>
+      <li><span>⏱️ </span>Reduces Friction & Prevents Drop-Offs</li>
+      <li><span>🤝 </span>Builds Trust Between Users</li>
+      <li><span>📈 </span>Increases Retention</li>
+    </ul>
+    <p>✅ When you're done exploring, <strong>close the tab</strong> and return to the chatbot demo!</p>
+  </div>
+
+  <script>
+    // Typewriter effect
+    const text = 'Visitors can get what they need faster without digging through menus or pages, which increases engagement and satisfaction.';
+    let i = 0;
+    const speed = 35;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = typeWriter;
+
+    // Matrix effect
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "01";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ff88";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const char = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 50);
+  </script>
+</body>
+</html>

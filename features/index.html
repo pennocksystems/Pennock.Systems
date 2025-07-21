@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>API Features | Custom Chatbots</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+  
+  <!-- AOS animation CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!-- Added Orbitron font -->
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2d3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif; /* Applied Orbitron font */
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #4a90e2;
+    }
+
+    .box h2 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #333;
+    }
+
+    .box p {
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85em;
+      color: #888;
+    }
+
+        /* New Section for Benefits */
+        .benefits-box {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      margin: 40px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .benefits-box h2 {
+      color: #333;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .benefits-box p {
+      color: #555;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+      /* Demo Section Styling */
+  .demo-container {
+    background-color: #2d3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+
+  .demo-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .demo-container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+
+  .demo-button {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .demo-button:hover {
+    background-color: #c0392b;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔑API Integrations for Business Chatbots🔑</h1>
+  </header>
+
+  <main class="container">
+    <div class="box" data-aos="fade-up" data-aos-delay="100">
+      <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
+      <h2>Weather API</h2>
+      <p>Deliver live weather updates based on a user’s location. Perfect for travel, outdoor services, or personalized interactions.</p>
+    </div>
+
+    <div class="box" data-aos="fade-up" data-aos-delay="200">
+      <div class="icon"><i class="fas fa-chart-line"></i></div>
+      <h2>Stock Market API</h2>
+      <p>Show real-time stock data or market trends to keep users informed — ideal for financial services and investment platforms.</p>
+    </div>
+
+    <div class="box" data-aos="fade-up" data-aos-delay="300">
+      <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+      <h2>Geolocation API</h2>
+      <p>Identify where users are visiting from to tailor responses or route them to the right local team or service area.</p>
+    </div>
+
+    <div class="box" data-aos="fade-up" data-aos-delay="400">
+      <div class="icon"><i class="fas fa-calendar-check"></i></div>
+      <h2>Calendar & Scheduling API</h2>
+      <p>Allow customers to book appointments, check availability, or set reminders right from the chatbot interface.</p>
+    </div>
+  </main>
+<!-- Benefits Section -->
+<div class="benefits-box">
+    <h2>Why Integrate API Keys into Your Business Chatbot?</h2>
+    <p>Integrating API keys into your business chatbot can unlock a wide range of advanced features that not only improve user experience but also <strong>provide real-time, personalized data directly to users.</strong> Here are some key benefits:</p>
+    <ul style="text-align: left; max-width: 800px; margin: auto; list-style-position: inside; padding-left: 20px;">
+      <li style="margin-bottom: 20px;">
+        <strong>🌟 Enhanced User Experience:</strong> Provide users with real-time updates, weather forecasts, stock prices, and more based on their needs.
+      </li>
+      <li style="margin-bottom: 20px;">
+        <strong>💬 Data Personalization:</strong> Deliver tailored responses by fetching data relevant to the user’s location, preferences, or behaviors.
+      </li>
+      <li style="margin-bottom: 20px;">
+        <strong>⚙️ Streamlined Processes:</strong> Automate workflows like scheduling, appointments, and customer support by integrating API-powered services.
+      </li>
+      <li>
+        <strong>🏆 Competitive Edge:</strong> Offering advanced features like live data integration sets your business apart and shows you are staying ahead of the curve.
+      </li>
+    </ul>
+  </div>
+  <!-- Demo Section -->
+<div class="demo-container">
+    <h2>Want to Interact with an Integration Demo?</h2>
+    <p>Click below to explore a live demo of how API integrations can work in your chatbot!</p>
+    <a href="weatherdemo.html" class="demo-button" target="_blank">See the Demo</a>
+  </div>
+  <footer>
+    © 2025 Pennock Systems | RSG — All rights reserved.
+  </footer>
+
+  <!-- AOS animation script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+</script>
+
+</body>
+</html>
