@@ -465,10 +465,6 @@ nav ul li a:hover {
   }
 }
 
-  .nav-center {
-    margin-left: 1rem; /* <-- added shift */
-  }
-
 @media (min-width: 769px) {
   .nav-links {
     display: flex !important;
