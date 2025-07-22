@@ -1,4 +1,4 @@
-const text = "Trusted solutions for modern websites and intelligent automation.";
+const text = "Built for Impact.";
 const typingTarget = document.getElementById("typing-text");
 
 let index = 0;
