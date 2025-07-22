@@ -258,10 +258,11 @@ nav ul li a:hover {
     gap: 1rem;
   }
 
-  .nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ensures vertical centering */
+  flex: 1;
 }
   
   .instagram-link {
