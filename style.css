@@ -328,9 +328,14 @@ nav ul li a:hover {
 
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.8rem;
-    z-index: 1;
+    font-size: 1.5rem;           /* scale down a bit more */
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 1rem;             /* add horizontal padding */
+    overflow-wrap: break-word;   /* allow wrapping */
+    word-wrap: break-word;
   }
+}
   
   .hero-content p {
     font-size: 0.9rem;
