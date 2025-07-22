@@ -326,10 +326,17 @@ nav ul li a:hover {
 
 /* MOBILE ADJUSTMENTS */
 
-.hero-content h1 {
-    font-size: 1.8rem;
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     z-index: 1;
-}  
+  }
+
   .hero-content p {
     font-size: 0.9rem;
     z-index: 1;  
