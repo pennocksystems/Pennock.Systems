@@ -480,6 +480,12 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 768px) { /* you can adjust breakpoint */
+  .nav-center {
+    display: none;
+  }
+}
+
   
   
   
