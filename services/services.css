@@ -173,3 +173,20 @@
   .package-btn:hover {
     transform: scale(1.05);
   }
+
+@media (max-width: 768px) {
+  .hero-content.glass-box {
+    padding: 1.5rem 1.5rem;
+    font-size: 0.9rem;
+    transform: scale(0.95); /* slightly shrink it */
+    max-width: 90%;
+  }
+
+  .hero-content.glass-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-content.glass-box p {
+    font-size: 1rem;
+  }
+}
