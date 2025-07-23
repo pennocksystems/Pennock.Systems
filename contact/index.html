@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../services/services.css" />
   <link rel="stylesheet" href="contact.css" />
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+  <link rel="icon" href="../images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
   <nav class="navbar">
     <div class="nav-left">
         <a href="index.html" class="logo-link">
-          <img src="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" alt="Pennock Systems Logo" class="logo-img" />
+          <img src="../images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" alt="Pennock Systems Logo" class="logo-img" />
         </a>
       </div>
   
@@ -67,11 +67,27 @@
 </section>
  
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Pennock Systems. All rights reserved.</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Pennock Systems. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/pennocksystems" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/pennocksystems" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
+    <script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+</script>
   <script src="contact.js"></script>
 </body>
 </html>
