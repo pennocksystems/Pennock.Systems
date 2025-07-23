@@ -73,7 +73,7 @@ switch (option) {
                 botMessage = "Communicate with customers in their <strong>preferred language</strong> to widen your reach. Choose from upwards of <strong>10 languages</strong> to provide users with the best experience possible🌎<br> (Rates May Apply)";
                 break;
             case "🔑 External Data":
-                botMessage = "We can integrate some <strong>pretty cool features</strong> when it comes to external keys that improve functionality, as well as boost the user-experience! <br>Click <a href='features.html' target='_blank'><strong>HERE</strong></a> to see some features you can choose from!";                
+                botMessage = "We can integrate some <strong>pretty cool features</strong> when it comes to external keys that improve functionality, as well as boost the user-experience! <br>Click <a href='../features' target='_blank'><strong>HERE</strong></a> to see some features you can choose from!";                
                 break;
             case "🚀 Scalability":
                 botMessage = "Scalability is key to long-term success! A scalable bot means <strong>fewer growing pains and more room for innovation</strong>🧠";
