@@ -107,11 +107,27 @@
   </section>  
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Pennock Systems. All rights reserved.</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Pennock Systems. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/pennocksystems" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/pennocksystems" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
+    <script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+</script>
   <script src="about.js"></script>
 </body>
 </html>
