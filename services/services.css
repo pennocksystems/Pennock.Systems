@@ -52,6 +52,7 @@
     border-radius: 1rem;
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+    text-align: center;
   }
 
   .service-box h3 {
