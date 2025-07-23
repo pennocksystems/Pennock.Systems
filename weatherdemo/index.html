@@ -158,6 +158,63 @@
   padding-left: 25px;  /* Space for the droplet emoji */
 }
 
+@media (max-width: 768px) {
+  .weather-layout {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .iphone-frame {
+    width: 90%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .weather-instructions {
+    width: 90%;
+    max-width: none;
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  .app-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  input, button {
+    width: 90%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #weatherResult {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  input, button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
   </style>
 </head>
 <body>
