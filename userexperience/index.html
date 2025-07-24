@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
+  <link rel="icon" href="../images/ChatGPT Image May 2, 2025, 07_48_05 PM.png" type="image/png" />
   <title>Pennock Systems | RSG</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
@@ -147,6 +147,66 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
     }
+
+    /* MOBILE ADJUSTMENTS */
+    @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow-y: auto; /* allow vertical scrolling */
+    padding: 20px 10px;
+    height: auto; /* let content set height */
+  }
+
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem;
+  }
+
+  li span {
+    font-size: 1.2rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .start-button {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .emoji {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
   </style>
 </head>
 <body>
