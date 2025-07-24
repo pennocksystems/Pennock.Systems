@@ -135,7 +135,7 @@ if (option === "🌦️Current Conditions") {
                 botMessage = "From <strong>golf tournaments</strong> to <strong>social gatherings</strong>, there's always something happening at Whispering Pines. Join us for some fun on and <a href='/event/' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>off the course</a>!🎉";
                 break;                               
             case "Resort🏨":
-                botMessage = `Featuring <strong>60 beautifully appointed rooms</strong> designed for comfort and relaxation, our resort offers the perfect blend of <strong>nature, elegance, and serenity.</strong> <a href="resort.html" target="_blank" style='color: #355E3B; font-weight: bold; text-decoration: underline;'>See more</a>...🌿`;
+                botMessage = `Featuring <strong>60 beautifully appointed rooms</strong> designed for comfort and relaxation, our resort offers the perfect blend of <strong>nature, elegance, and serenity.</strong> <a href="/resort/" target="_blank" style='color: #355E3B; font-weight: bold; text-decoration: underline;'>See more</a>...🌿`;
                 break;                
             case "Contact📞":
                 botMessage = "We’re here to help! Reach us at <strong>(555) 123-4567</strong> or visit us at <strong>789 Pinecone Ridge Road, Evergreen Hills, CO 00000</strong>. We look forward to hearing from you! 🌲📞";
