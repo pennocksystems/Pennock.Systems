@@ -161,8 +161,10 @@
 @media (max-width: 768px) {
   .weather-layout {
     flex-direction: column;
-    gap: 15px;          /* tighter spacing */
+    gap: 15px; /* tighter spacing */
     padding: 10px;
+    justify-content: flex-start; /* prioritize showing instructions first */
+    align-items: center;
   }
 
   body {
@@ -172,7 +174,7 @@
 .iphone-frame {
   width: 90%;
   height: auto;
-  min-height: 400px; /* added minimum height */
+  min-height: 500px; /* added minimum height */
   padding: 20px 10px;
 }
 
