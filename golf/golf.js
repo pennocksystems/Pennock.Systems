@@ -117,7 +117,7 @@ if (option === "🌦️Current Conditions") {
                 botMessage = "Let me give you the lay of the land ⛳️. Whether you’re curious about <strong>tee times</strong>, <strong>course layout</strong>, or our <strong>legendary 18th hole</strong>, I’ve got the details lined up like a perfect fairway shot!";
                 break;
             case "🏌️Course Layout":
-                botMessage = 'Featuring a beautifully designed <a href="course.html" target="_blank" style="color: #355E3B; font-weight: bold; text-decoration: underline;">18-hole course</a> among scenic pine groves.🌲<br><strong>Front 9:</strong> A strategic mix of par 3s and 4s.<br><strong>Back 9:</strong> More challenging with elevation changes, & water hazards.';
+                botMessage = 'Featuring a beautifully designed <a href="/course/" target="_blank" style="color: #355E3B; font-weight: bold; text-decoration: underline;">18-hole course</a> among scenic pine groves.🌲<br><strong>Front 9:</strong> A strategic mix of par 3s and 4s.<br><strong>Back 9:</strong> More challenging with elevation changes, & water hazards.';
                 break;
             case "🕐Tee Times & Hours":
                 botMessage = `Our tee times are available every day, from <strong>6:50 AM to 6:00 PM</strong>, giving you plenty of opportunities to enjoy our 18-hole championship course.👍🏼`;
