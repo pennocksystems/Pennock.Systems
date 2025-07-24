@@ -123,7 +123,7 @@ if (option === "🌦️Current Conditions") {
                 botMessage = `Our tee times are available every day, from <strong>6:50 AM to 6:00 PM</strong>, giving you plenty of opportunities to enjoy our 18-hole championship course.👍🏼`;
                 break;
             case "📜History":
-                botMessage = 'Founded in 1963 by the visionary golf enthusiast <strong>Harold “Hal” Whitmore</strong>, Whispering Pines was carved out of 200 acres of rolling Southern woodland. <a href="history.html" target="_blank" style="color: #355E3B; font-weight: bold; text-decoration: underline;">Read more</a>...';
+                botMessage = 'Founded in 1963 by the visionary golf enthusiast <strong>Harold “Hal” Whitmore</strong>, Whispering Pines was carved out of 200 acres of rolling Southern woodland. <a href="/history/" target="_blank" style="color: #355E3B; font-weight: bold; text-decoration: underline;">Read more</a>...';
                 break;                
             case "Clubhouse🏌️":
                 botMessage = 'Our clubhouse offers a <strong>full-service bar</strong>, a cozy <strong>dining area</strong>, and a <strong>pro shop</strong> with everything you need for your game. Would you like to know more about our menu, or event calendar?📅';
