@@ -94,7 +94,7 @@ switch (option) {
                 const buttonContainer = document.createElement("div");
                 buttonContainer.classList.add("button-container");
                 buttonContainer.appendChild(createButton("💬24/7 Support"));
-                buttonContainer.appendChild(createButton("😄User-Experience", "userexperience.html"));
+                buttonContainer.appendChild(createButton("😄User-Experience", "/userexperience/"));
                 buttonContainer.appendChild(createButton("📉Operational Costs"));
                 buttonContainer.appendChild(createButton("⚙️Customizable"));
                 messages.appendChild(buttonContainer);
