@@ -181,8 +181,42 @@
 }
 
 @media (max-width: 768px) {
+  /* Hide instructions */
   .weather-instructions {
     display: none;
+  }
+
+  /* Layout adjustments */
+  .weather-layout {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* full screen height */
+    overflow-y: auto;  /* allow scrolling if needed */
+  }
+
+  body {
+    overflow-y: auto;
+  }
+
+  .center-wrapper {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align items from top */
+    align-items: center;
+    padding-top: 20px;
+    overflow-y: auto;
+  }
+
+  .iphone-frame {
+    width: 300px; /* keep fixed width to prevent "smooshing" */
+    height: auto;
+    min-height: 500px;
+    padding: 20px 10px;
   }
 
   .app-icon {
@@ -195,7 +229,8 @@
     font-size: 1.2rem;
   }
 
-  input, button {
+  input,
+  button {
     width: 90%;
     font-size: 14px;
     padding: 8px;
@@ -211,26 +246,14 @@
     font-size: 1rem;
   }
 
-  @media (max-width: 768px) {
-  .center-wrapper {
-    height: auto;          /* let content size naturally */
-    min-height: 100vh;     /* keep at least full viewport height */
-    display: flex;         /* keep flex for horizontal centering */
-    flex-direction: column;
-    justify-content: flex-start;  /* align items from top */
-    align-items: center;
-    padding-top: 20px;     /* add some breathing room from top */
-    overflow-y: auto;      /* allow scrolling if needed */
-  }
-}
-
   .step-icon {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
 
-  input, button {
+  input,
+  button {
     font-size: 12px;
     padding: 6px;
   }
