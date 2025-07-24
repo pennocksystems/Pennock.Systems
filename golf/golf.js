@@ -132,7 +132,7 @@ if (option === "🌦️Current Conditions") {
                 botMessage = "Where <strong>great food and scenic views meet.</strong> Whether you're looking to unwind after a round or enjoy a casual meal with friends, we’ve got something for everyone. <a href='/menu/' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>View the menu here!</a>";
                 break;             
             case "Club Events🏌️":
-                botMessage = "From <strong>golf tournaments</strong> to <strong>social gatherings</strong>, there's always something happening at Whispering Pines. Join us for some fun on and <a href='event.html' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>off the course</a>!🎉";
+                botMessage = "From <strong>golf tournaments</strong> to <strong>social gatherings</strong>, there's always something happening at Whispering Pines. Join us for some fun on and <a href='/event/' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>off the course</a>!🎉";
                 break;                               
             case "Resort🏨":
                 botMessage = `Featuring <strong>60 beautifully appointed rooms</strong> designed for comfort and relaxation, our resort offers the perfect blend of <strong>nature, elegance, and serenity.</strong> <a href="resort.html" target="_blank" style='color: #355E3B; font-weight: bold; text-decoration: underline;'>See more</a>...🌿`;
