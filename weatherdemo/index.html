@@ -211,6 +211,19 @@
     font-size: 1rem;
   }
 
+  @media (max-width: 768px) {
+  .center-wrapper {
+    height: auto;          /* let content size naturally */
+    min-height: 100vh;     /* keep at least full viewport height */
+    display: flex;         /* keep flex for horizontal centering */
+    flex-direction: column;
+    justify-content: flex-start;  /* align items from top */
+    align-items: center;
+    padding-top: 20px;     /* add some breathing room from top */
+    overflow-y: auto;      /* allow scrolling if needed */
+  }
+}
+
   .step-icon {
     width: 40px;
     height: 40px;
