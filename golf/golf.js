@@ -129,7 +129,7 @@ if (option === "🌦️Current Conditions") {
                 botMessage = 'Our clubhouse offers a <strong>full-service bar</strong>, a cozy <strong>dining area</strong>, and a <strong>pro shop</strong> with everything you need for your game. Would you like to know more about our menu, or event calendar?📅';
                 break;                  
             case "Pine View Grill🌲":
-                botMessage = "Where <strong>great food and scenic views meet.</strong> Whether you're looking to unwind after a round or enjoy a casual meal with friends, we’ve got something for everyone. <a href='menu.html' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>View the menu here!</a>";
+                botMessage = "Where <strong>great food and scenic views meet.</strong> Whether you're looking to unwind after a round or enjoy a casual meal with friends, we’ve got something for everyone. <a href='/menu/' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>View the menu here!</a>";
                 break;             
             case "Club Events🏌️":
                 botMessage = "From <strong>golf tournaments</strong> to <strong>social gatherings</strong>, there's always something happening at Whispering Pines. Join us for some fun on and <a href='event.html' target='_blank' style='color: #355E3B; font-weight: bold; text-decoration: underline;'>off the course</a>!🎉";
