@@ -110,3 +110,53 @@ h1 {
 .event:hover {
     text-decoration: underline;
 }
+
+/* MOBILE ADJUSTMENTS */
+/* MOBILE ADJUSTMENTS */
+
+@media (max-width: 768px) {
+  .calendar {
+    padding: 10px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    gap: 8px;
+  }
+
+  .day {
+    padding: 15px;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+
+  .event {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-grid {
+    grid-template-columns: 1fr; /* single column on phones */
+    gap: 6px;
+  }
+
+  .day {
+    padding: 12px;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+
+  .event {
+    font-size: 0.85rem;
+  }
+
+  .day-label {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
