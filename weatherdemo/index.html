@@ -159,13 +159,15 @@
 }
 
 @media (max-width: 768px) {
-  .weather-layout {
-    flex-direction: column;
-    gap: 15px; /* tighter spacing */
-    padding: 10px;
-    justify-content: flex-start; /* prioritize showing instructions first */
-    align-items: center;
-  }
+.weather-layout {
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* ensure it uses full screen height */
+  overflow-y: auto;  /* allow scroll if needed */
+}
 
   body {
   overflow-y: auto;
@@ -178,12 +180,10 @@
   padding: 20px 10px;
 }
 
-  .weather-instructions {
-    width: 90%;
-    max-width: none;
-    font-size: 0.9rem;
-    padding: 15px;
-  }
+.weather-instructions {
+  flex-shrink: 0; /* prevent shrinking */
+  max-height: none; /* remove any height restriction */
+}
 
   .app-icon {
     width: 50px;
