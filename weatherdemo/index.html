@@ -180,10 +180,10 @@
   padding: 20px 10px;
 }
 
-.weather-instructions {
-  flex-shrink: 0; /* prevent shrinking */
-  max-height: none; /* remove any height restriction */
-}
+@media (max-width: 768px) {
+  .weather-instructions {
+    display: none;
+  }
 
   .app-icon {
     width: 50px;
