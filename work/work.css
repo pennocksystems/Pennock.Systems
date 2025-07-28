@@ -67,6 +67,10 @@
   color: inherit;        /* keeps text color the same as surrounding */
   display: block;        /* ensures the link fills the entire card */
 }
+
+.project-card-link:hover {
+  cursor: pointer;
+}
   
   
   
