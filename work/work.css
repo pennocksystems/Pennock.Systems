@@ -61,6 +61,12 @@
     font-weight: 500;
     transition: transform 0.2s ease;
   }
+
+.project-card-link {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps text color the same as surrounding */
+  display: block;        /* ensures the link fills the entire card */
+}
   
   
   
