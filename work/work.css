@@ -77,7 +77,7 @@
   height: auto;         /* maintain aspect ratio */
   object-fit: contain;  /* make sure the whole image shows */
   display: block;       /* remove any inline gap */
-  margin: 30px auto 10px;  /* center image and add spacing below */
+  margin: 0 auto 10px;  /* center image and add spacing below */
 }
 
   
