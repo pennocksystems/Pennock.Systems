@@ -71,6 +71,15 @@
 .project-card-link:hover {
   cursor: pointer;
 }
+
+.ridgeline-img {
+  width: 150px;         /* adjust size */
+  height: auto;         /* maintain aspect ratio */
+  object-fit: contain;  /* make sure the whole image shows */
+  display: block;       /* remove any inline gap */
+  margin: 0 auto 10px;  /* center image and add spacing below */
+}
+
   
   
   
