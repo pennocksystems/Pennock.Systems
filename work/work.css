@@ -80,6 +80,13 @@
   margin: 0 auto 10px;  /* center image and add spacing below */
 }
 
+.project-link {
+    text-decoration: none;
+    color: inherit; /* Keeps original text color */
+    display: block; /* Makes the whole area clickable */
+}
+
+
   
   
   
