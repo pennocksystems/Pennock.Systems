@@ -1,5 +1,5 @@
 const headerText = "Powering your Future with Smart Solutions";
-const subText = "From intelligent chatbots to strategic tech consulting, we build tools that elevate your business in the age of automation.";
+const subText = "From AI-powered assistants and virtual resumes for students & professionals to strategic tech consulting, we build tools that elevate your business in the age of automation.";
 
 const headerTarget = document.getElementById("typing-header");
 const subTarget = document.getElementById("typing-sub");
